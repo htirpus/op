@@ -1,0 +1,50 @@
+<html>
+  <head>
+    <title>Employeem information</title>
+    <script>
+      function findsalary() {
+        var empname = document.frmEmp.ename.value;
+        var edept = document.frmEmp.dept.value;
+        var basicpay = parseInt(document.frmEmp.basic.value);
+        var da, hra, tax, pf, grosspay, deductions, netpay;
+        da = basicpay * 0.5;
+        hra = basicpay * 0.15;
+        grosspay = basicpay + da + hra;
+        pf = grosspay * 0.12;
+        tax = grosspay * 0.1;
+        deductions = pf + tax;
+        netpay = grosspay - deductions;
+        document.write("<h1>Employee salary details</h1><br/></br>");
+        document.writeln("Employee name    :<b>" + empname + "</b><br/>");
+        document.writeln("Basic pay        :<b>" + basicpay + "</b><br/>");
+        document.writeln("Dearness Allowance  :<b>" + da + "</b><br/>");
+        document.writeln("House rent Allowance  :<b>" + hra + "</b><br/>");
+        document.writeln("Gross salary  :<b>" + grosspay + "</b><br/>");
+        document.writeln("Deductions   :<b>" + deductions + "</b><br/>");
+        document.writeln("Net salary   :<b>" + netpay + "</b><br/>");
+      }
+    </script>
+  </head>
+  <body bgcolor="cryan">
+    <form name="frmEmp">
+    <center>
+      <b><h1>Employee salary</h1></b>
+    </center>
+    <br /><br />
+    <h2><center>Enter the employee name,dept and basic pay</center></h2>
+    <pre>
+                <font size="5">
+                    <center><h1>Employee salary details</h1></center>
+                    Employee Name <input type="text" name="ename"><br/>
+                    Department <input type="text" name="dept"><br/>
+                    Basic pay <input type="text" name="basic"><br/><br/>
+
+                </font>
+            </pre>
+    <input
+      type="button"
+      value="Calculate the net salary"
+      onclick="findsalary();"
+    >
+  </body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html PUBLIC".//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1.transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Solve mathematical expression</title>
+<script type="text/javascript">
+function calc()
+{
+document.Sample.answer.value=eval(document.Sample.calculate.value)
+}
+</script>
+</head>
+<body bgcolor=teal>
+<form name="Sample">Enter a mathematical expression in the first box, and than use the calculate button to get the answer.<br/>
+<table cellpadding="4" cellspacing="0" height=100 width=200 bgcolor="blue">
+<tr>
+<td><input type="text" size="20" name="calculate" onclick="calc()"></td>
+<td><input type="button" name="Btn1" value="Calculate" onclick="calc()"></td>
+</tr>
+<tr>
+<td><b>Answer:</b><input type="text"size="20" name="answer"></td>
+<td><input type="reset" name="Btn2" value="Reset"></td>
+</tr>
+</table>Click on reset button to enter again new expression.
+</form>
+</body>
+</html>

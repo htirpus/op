@@ -1,0 +1,22 @@
+<!DOCTYPE html PUBLIC"-//W3C//DTD XHTML 1.0 Transitional//EN""http://www.w3.org/TR/xhtml1/DTD/xhtml1.transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Recursive Factorial Function</title>
+<script type="text/javascript">
+var number,n;
+number=window.prompt("Enter the number to find the factorial","0");
+n=parseInt(number);
+document.write("<h1><center>Factorial of"+n+"is");
+for(var i=0;i<=n;i++)
+var fact=factorial(n);
+document.write("<i>"+fact+"</i></center></h1>");
+function factorial(n)
+{
+if(n<=1)
+return 1;
+else
+return n*factorial(n-1);
+}
+</script>
+</head><body bgcolor="powderblue"></body>
+</html>

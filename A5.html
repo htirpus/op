@@ -1,0 +1,23 @@
+<!DOCTYPE html PUBLIC".//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1.transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Sum of Natural numbers</title>
+<script type="text/javascript">
+var number,n,s=0;
+number=window.prompt("Enter the range to find the sum","0");
+n=parseInt(number);
+if(n<=0)
+{
+alert("Enter a positive number");
+}
+document.write("<h1><center>Sum of"+n+"Natural number is");
+sum(n);
+document.write("<i>"+s+"</i></center></h1>");
+function sum(n)
+{
+for(var i=0;i<=n;i++)
+s=s+i;
+}
+</script>
+</head><body bgcolor="powderblue"></body>
+</html>
